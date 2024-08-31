@@ -18,7 +18,7 @@ pipeline {
 
     environment {
                 DEPLOY_TO = "develop"
-                GREETING = "Happy Day"
+                GREETING = "Happy Days"
             }
 
     stages {
