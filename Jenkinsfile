@@ -59,7 +59,7 @@ pipeline {
         success { 
             echo 'I will say Hello only when it is success!'
         }
-        failed { 
+        failure { 
             echo 'I will say Bye when it is failed!'
         }
     }
