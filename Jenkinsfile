@@ -49,7 +49,7 @@ pipeline {
                 echo "Password: ${params.PASSWORD}"
                 echo 'to trigger build after commit code to github.....'
                 
-                error 'some failure to check post failure message...!'
+                //error 'some failure to check post failure message...!'  // to trigger the failure in post phase
             }
         }
     }
