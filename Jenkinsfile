@@ -8,13 +8,13 @@ pipeline {
         disableConcurrentBuilds()  // it will not allow concurrent builds
     }
 
-    // parameters {
-    //     string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
-    //     text(name: 'BIOGRAPHY', defaultValue: '', description: 'Enter some information about the person')
-    //     booleanParam(name: 'TOGGLE', defaultValue: true, description: 'Toggle this value')
-    //     choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
-    //     password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
-    // }
+    parameters {
+        string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+        text(name: 'BIOGRAPHY', defaultValue: '', description: 'Enter some information about the person')
+        booleanParam(name: 'TOGGLE', defaultValue: true, description: 'Toggle this value')
+        choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
+        password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
+    }
 
     environment {
                 DEPLOY_TO = "develop"
@@ -49,7 +49,7 @@ pipeline {
                 echo "Password: ${params.PASSWORD}"
                 echo 'to trigger build after commit code to github.....'
                 
-                error 'some failure to check post failure message...!'  // to trigger the failure in post phase
+               // error 'some failure to check post failure message...!'  // to trigger the failure in post phase
             }
         }
     }
